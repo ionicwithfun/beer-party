@@ -31,9 +31,19 @@ export class HomePage {
 
   idle (beer, event) {
     event.stopPropagation();
-    beer.idle.is = !beer.idle.is;
-    beer.idle.count++;
-    console.log(beer);
+    if (!beer.idle.is) {
+      beer.idle.is = true;
+      let time = beer.idle.count / 2 * 1000;
+      beer.idle.timer = Math.ceil(beer.idle.count / 2);
+      let interval = setInterval(() => {
+        beer.idle.timer--;
+      }, 1000);
+      setTimeout(() => {
+        beer.idle.count++;
+        beer.idle.is = false;
+        clearInterval(interval);
+      }, time);
+    }
   }
 
   navToAbout () {
