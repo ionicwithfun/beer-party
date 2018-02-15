@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { BeerModalPage } from '../beer-modal/beer-modal';
 import { BeerListProvider } from '../../providers/beer-list/beer-list';
+import { AboutPage } from '../about/about';
 
 @Component({
   selector: 'page-home',
@@ -28,4 +29,9 @@ export class HomePage {
   idle (beer, event) {
     event.stopPropagation();
   }
+
+  navToAbout () {
+    this.navCtrl.push(AboutPage);
+  }
+
 }

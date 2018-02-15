@@ -9,13 +9,15 @@ import { HomePage } from '../pages/home/home';
 import { BeerListProvider } from '../providers/beer-list/beer-list';
 import { TabsPage } from '../pages/tabs/tabs';
 import { BeerModalPage } from '../pages/beer-modal/beer-modal';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     TabsPage,
-    BeerModalPage
+    BeerModalPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { BeerModalPage } from '../pages/beer-modal/beer-modal';
     MyApp,
     HomePage,
     TabsPage,
-    BeerModalPage
+    BeerModalPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
