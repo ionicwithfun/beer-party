@@ -8,12 +8,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { BeerListProvider } from '../providers/beer-list/beer-list';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     TabsPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { TabsPage } from '../pages/tabs/tabs';
   entryComponents: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
