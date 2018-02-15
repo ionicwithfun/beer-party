@@ -14,21 +14,27 @@
   <ion-list>
       <ion-item>
         <ion-avatar item-start>
-          <img src="https://www.lebonsiropderable.com/wp-content/uploads/2015/07/biere-quebec_Labatt-Bleue_le-bon-sirop-d-erable.jpg">
+          <img src="{{ beer.photo }}">
         </ion-avatar>
         <h2>{{ beer.name }}</h2>
-        <p>Description</p>
+        <p>{{ beer.area }}</p>
+      </ion-item>
+      <ion-item>
+          Type
+        <ion-note item-end>
+          {{ beer.type }}
+        </ion-note>
       </ion-item>
       <ion-item>
         Degrés
         <ion-note item-end>
-          10
+          {{ beer.degree }}
         </ion-note>
       </ion-item>
       <ion-item>
           Région
         <ion-note item-end>
-          Nord Pas de Calais
+          {{ beer.area }}
         </ion-note>
       </ion-item>
   </ion-list>

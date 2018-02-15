@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 /*
@@ -10,7 +9,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class BeerListProvider {
   beerList: any;
-  constructor(public http: HttpClient) {
+  constructor() {
     this.beerList = [
       {name: 'Duvel', type: 'Blonde', area:'Belgique', degree:'8', photo:'assets/imgs/beers/duvel.jpg'},
       {name: 'Leffe', type: 'Blonde', area:'Belgique', degree:'7', photo:'assets/imgs/beers/leffe.jpg'},
