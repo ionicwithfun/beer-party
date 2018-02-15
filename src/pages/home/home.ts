@@ -31,8 +31,9 @@ export class HomePage {
 
   idle (beer, event) {
     event.stopPropagation();
-    console.log(beer);
     beer.idle.is = !beer.idle.is;
+    beer.idle.count++;
+    console.log(beer);
   }
 
   navToAbout () {
