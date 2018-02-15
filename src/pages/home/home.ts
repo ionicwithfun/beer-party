@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { BeerModalPage } from '../beer-modal/beer-modal';
+import { BeerListProvider } from '../../providers/beer-list/beer-list';
 import { AboutPage } from '../about/about';
 
 @Component({
@@ -9,12 +11,23 @@ import { AboutPage } from '../about/about';
 export class HomePage {
   beers: object[] = [];
 
-  constructor(public navCtrl: NavController) {
-    for (let i = 0; i < 200; i++) {
-      this.beers.push({
-        name: i
-      });
-    }
+  constructor(
+    public navCtrl: NavController,
+    public modalCtrl: ModalController,
+    public beerListProvider: BeerListProvider
+  ) {
+    this.beerListProvider.loadAll().then(beers => {
+      this.beers = beers;
+    })
+  }
+
+  openModal (beer) {
+    let modal = this.modalCtrl.create(BeerModalPage, { beer });
+    modal.present();
+  }
+
+  idle (beer, event) {
+    event.stopPropagation();
   }
 
   navToAbout () {

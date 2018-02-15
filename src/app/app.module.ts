@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { BeerListProvider } from '../providers/beer-list/beer-list';
 import { TabsPage } from '../pages/tabs/tabs';
+import { BeerModalPage } from '../pages/beer-modal/beer-modal';
 import { AboutPage } from '../pages/about/about';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AboutPage } from '../pages/about/about';
     MyApp,
     HomePage,
     TabsPage,
+    BeerModalPage,
     AboutPage
   ],
   imports: [
@@ -26,6 +28,7 @@ import { AboutPage } from '../pages/about/about';
     MyApp,
     HomePage,
     TabsPage,
+    BeerModalPage,
     AboutPage
   ],
   providers: [
