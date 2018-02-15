@@ -14,6 +14,9 @@
       </ion-thumbnail>
       <h2>{{ beer.name }}</h2>
       <p>{{ beer.area }}</p>
+      <div *ngIf="beer.idle.is">
+        En cours...
+      </div>
       <button ion-button clear item-end (click)="idle(beer, $event)">Idle</button>
     </ion-item>
   </ion-list>

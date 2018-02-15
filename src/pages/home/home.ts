@@ -17,6 +17,9 @@ export class HomePage {
     public beerListProvider: BeerListProvider
   ) {
     this.beerListProvider.loadAll().then(beers => {
+      for (let beer of beers) {
+        beer.idle = {is: false, count: 0};
+      }
       this.beers = beers;
     })
   }
@@ -28,6 +31,8 @@ export class HomePage {
 
   idle (beer, event) {
     event.stopPropagation();
+    console.log(beer);
+    beer.idle.is = !beer.idle.is;
   }
 
   navToAbout () {
