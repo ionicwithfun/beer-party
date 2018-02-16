@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,9 +22,13 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  OpenPage(){
+  OpenAboutPage(){
     this.menu.close();
     this.nav.push(AboutPage);
+  }
+  OpenContactPage(){
+    this.menu.close();
+    this.nav.push(ContactPage);
   }
 }
 
