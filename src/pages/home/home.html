@@ -17,8 +17,13 @@
       </ion-thumbnail>
       <h2>{{ beer.name }}</h2>
       <p>{{ beer.area }}</p>
-      <div *ngIf="beer.idle.is">
-        En cours...
+      <div>
+        {{ beer.idle.count }}
+      </div>
+      <div style="min-height:20px">
+        <span *ngIf="beer.idle.is">
+          En cours... {{ beer.idle.timer }}
+        </span>
       </div>
       <button ion-button clear item-end (click)="idle(beer, $event)">Idle</button>
     </ion-item>

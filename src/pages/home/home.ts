@@ -18,7 +18,7 @@ export class HomePage {
   ) {
     this.beerListProvider.loadAll().then(beers => {
       for (let beer of beers) {
-        beer.idle = {is: false, count: 0};
+        beer.idle = {is: false, count: 0, timer: 0};
       }
       this.beers = beers;
     })
@@ -31,8 +31,19 @@ export class HomePage {
 
   idle (beer, event) {
     event.stopPropagation();
-    console.log(beer);
-    beer.idle.is = !beer.idle.is;
+    if (!beer.idle.is) {
+      beer.idle.is = true;
+      beer.idle.timer = Math.ceil(beer.idle.count / 2);
+      let time = beer.idle.timer * 1000;
+      let interval = setInterval(() => {
+        beer.idle.timer--;
+      }, 1000);
+      setTimeout(() => {
+        beer.idle.count++;
+        beer.idle.is = false;
+        clearInterval(interval);
+      }, time);
+    }
   }
 
   navToAbout () {
