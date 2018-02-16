@@ -18,7 +18,7 @@ export class HomePage {
   ) {
     this.beerListProvider.loadAll().then(beers => {
       for (let beer of beers) {
-        beer.idle = {is: false, count: 0};
+        beer.idle = {is: false, count: 0, timer: 0};
       }
       this.beers = beers;
     })
@@ -33,8 +33,8 @@ export class HomePage {
     event.stopPropagation();
     if (!beer.idle.is) {
       beer.idle.is = true;
-      let time = beer.idle.count / 2 * 1000;
       beer.idle.timer = Math.ceil(beer.idle.count / 2);
+      let time = beer.idle.timer * 1000;
       let interval = setInterval(() => {
         beer.idle.timer--;
       }, 1000);
