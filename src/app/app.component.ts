@@ -14,6 +14,8 @@ export class MyApp {
   rootPage:any = TabsPage;
   @ViewChild(Nav) nav: Nav;
 
+  pageArray:any = ['AboutPage', 'ContactPage'];
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu: MenuController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -30,5 +32,10 @@ export class MyApp {
     this.menu.close();
     this.nav.push(ContactPage);
   }
+  
+  ionViewDidLoad() {
+    console.log(this.pageArray[0]);
+  }
 }
+
 

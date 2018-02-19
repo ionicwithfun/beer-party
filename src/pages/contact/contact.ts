@@ -22,4 +22,17 @@ export class ContactPage {
     console.log('ionViewDidLoad ContactPage');
   }
 
+  todo = {
+    subject: '',
+    description: ''
+  };
+  logForm(form) {
+ 
+      console.log(form.value);
+    
+      
+   
+    
+  }
+
 }
