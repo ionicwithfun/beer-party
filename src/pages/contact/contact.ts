@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the ContactPage page.
  *
@@ -23,14 +24,11 @@ export class ContactPage {
   }
 
   todo = {
-    subject: '',
-    description: ''
+    subject: ''
   };
   logForm(form) {
  
-      console.log(form.value);
-    
-      
+      console.log(form.value);  
    
     
   }

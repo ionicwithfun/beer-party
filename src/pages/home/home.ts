@@ -3,6 +3,7 @@ import { NavController, ModalController } from 'ionic-angular';
 import { BeerModalPage } from '../beer-modal/beer-modal';
 import { BeerListProvider } from '../../providers/beer-list/beer-list';
 import { AboutPage } from '../about/about';
+import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-home',

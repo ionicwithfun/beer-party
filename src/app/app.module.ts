@@ -11,6 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { BeerModalPage } from '../pages/beer-modal/beer-modal';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
+import { SettingsPage } from '../pages/settings/settings';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ContactPage } from '../pages/contact/contact';
     TabsPage,
     BeerModalPage,
     AboutPage,
-    ContactPage
+    ContactPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { ContactPage } from '../pages/contact/contact';
     TabsPage,
     BeerModalPage,
     AboutPage,
-    ContactPage
+    ContactPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
