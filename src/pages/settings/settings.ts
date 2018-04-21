@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 /**
  * Generated class for the SettingsPage page.
@@ -19,6 +20,16 @@ export class SettingsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
+  }
+  todo = {
+    username: '',
+    message: ''
+  };
+  logForm(form) {
+ 
+      console.log(form.username);  
+   
+    
   }
 
 }

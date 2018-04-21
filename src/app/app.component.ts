@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,6 +13,8 @@ import { AboutPage } from '../pages/about/about';
 export class MyApp {
   rootPage:any = TabsPage;
   @ViewChild(Nav) nav: Nav;
+
+  pageArray:any = ['AboutPage', 'ContactPage'];
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu: MenuController) {
     platform.ready().then(() => {
@@ -21,9 +24,18 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-  OpenPage(){
+  OpenAboutPage(){
     this.menu.close();
     this.nav.push(AboutPage);
   }
+  OpenContactPage(){
+    this.menu.close();
+    this.nav.push(ContactPage);
+  }
+  
+  ionViewDidLoad() {
+    console.log(this.pageArray[0]);
+  }
 }
+
 

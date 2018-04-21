@@ -1,25 +1,36 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
 /**
- * Generated class for the AboutPage page.
+ * Generated class for the ContactPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html',
+  selector: 'page-contact',
+  templateUrl: 'contact.html',
 })
-export class AboutPage {
+export class ContactPage {
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
+    console.log('ionViewDidLoad ContactPage');
+  }
+
+  todo = {
+    subject: ''
+  };
+  logForm(form) {
+ 
+      console.log(form.value);  
+   
+    
   }
 
 }
