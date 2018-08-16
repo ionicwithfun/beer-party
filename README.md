@@ -1,9 +1,9 @@
 # BeerParty
 
-Pour travailler sur BeerParty, vous devez créer un fork de https://github.com/WebforceLille8/BeerParty et ensuite :
+Pour travailler sur BeerParty, vous devez créer un fork de https://github.com/diw-8/beer-party et ensuite :
 
 ```
-git clone https://github.com/USERNAME/BeerParty
+git clone https://github.com/USERNAME/beer-party
 cd BeerParty
 npm install
 ionic serve
@@ -15,7 +15,7 @@ On peut maintenant travailler dessus.
 Pour synchroniser le dépôt officiel avec le votre :
 
 ```
-git remote add upstream https://github.com/WebforceLille8/BeerParty.git # Une seule fois
+git remote add upstream https://github.com/diw-8/BeerParty.git # Une seule fois
 git fetch upstream
 git merge upstream/master
 git push origin master
