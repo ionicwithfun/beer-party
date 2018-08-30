@@ -3,8 +3,6 @@
 Pour travailler sur BeerParty, vous devez créer un fork de ce dépôt et ensuite :
 
 ```
-git clone https://github.com/USERNAME/beer-party
-cd BeerParty
 npm install
 ionic serve
 ```
